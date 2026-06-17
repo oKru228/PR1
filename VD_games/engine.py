@@ -1,16 +1,15 @@
 import prompt
 
+
 def run_game(game_module):
     print("Welcome to the VD Games!")
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
-
     print(game_module.DESCRIPTION)
 
     rounds_count = 3
     for _ in range(rounds_count):
         question, correct_answer = game_module.generate_round()
-
         print(f"Question: {question}")
         user_answer = prompt.string("Your answer: ")
 
@@ -28,3 +27,6 @@ def run_game(game_module):
 
 
 
+
+if __name__ == "__main__":
+    main()
